@@ -21,30 +21,30 @@
         <input type="text" class="form-control" name="name" aria-describedby="emailHelp" placeholder="enter name">
     </div>
     <div class="form-group">
-        <label>nhap ngay sinh</label>
-        <input type=date class="form-control" name="ngaysinh" aria-describedby="emailHelp"
-               placeholder="enter ngay sinh">
+        <label>nhap giá</label>
+        <input type=text class="form-control" name="price"
+               placeholder="nhap giá">
     </div>
     <div class="form-group">
-        <label>nhap address</label>
-        <input type="text" class="form-control" name="address" placeholder="enter address">
+        <label>nhap soluong</label>
+        <input type="text" class="form-control" name="soluong" placeholder="enter so luong">
     </div>
     <div class="form-group">
-        <label>nhap phoneNumber</label>
-        <input type="number" class="form-control" name="phoneNumber" aria-describedby="emailHelp"
-               placeholder="enter phone">
+        <label>nhap mau sac</label>
+        <input type="text" class="form-control" name="mausac"
+               placeholder="enter mau sac">
     </div>
     <div class="form-group">
-        <label>nhap email</label>
-        <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="enter mail">
+        <label>nhap depcription</label>
+        <input type="text" class="form-control" name="depcription"  placeholder="enter depcription">
     </div>
 
     <div class="form-group">
-        <label>chon lop</label>
+        <label>chon hang</label>
         <select name="idCategory">
             <c:forEach items="${categorys}" var="p">
                 <option value="${p.idcategory}">
-                    <p>${p.nameCategory}</p>
+                    <p>${p.name}</p>
                 </option>
             </c:forEach>
         </select>

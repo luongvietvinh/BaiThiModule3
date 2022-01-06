@@ -45,12 +45,12 @@
 
                 <th>stt       </th>
                 <td>name       </td>
-                <th>ngay_sinh  </th>
-                <th>dia_chi   </th>
-                <th>sdt        </th>
-                <th>email      </th>
-                <th>tenlop      </th>
-                <th>  <a href="/student?action=create&id=${p.id}" class="btn btn-success">create</a></th>
+                <th>price  </th>
+                <th>soluong   </th>
+                <th>mauSac        </th>
+                <th>depcription      </th>
+                <th>tenhang      </th>
+                <th>  <a href="/product?action=create&id=${p.id}" class="btn btn-success">create</a></th>
                 <c:forEach items="${products}" var="p" varStatus="loop">
                     <tr>
                         <td>${loop.count}</td>
@@ -59,7 +59,7 @@
                         <td>${p.soluong}</td>
                         <td>${p.mausac}</td>
                         <td>${p.depcription}</td>
-                        <td>${p.nameCategory}</td>
+                        <td>${p.namecategory}</td>
 
                         <td><a href="/product?action=edit&id=${p.id}" class="btn btn-success">edit</a></td>
                         <td><a href="/product?action=delete&id=${p.id}" class="btn btn-danger">delete</a></td>
@@ -68,12 +68,7 @@
                 </tbody>
                 </thead>
 
-
             </table>
-            <h1> user name</h1>
-            <%= request.getParameter("name") %>>
-
-
         </div>
     </div>
 </div>

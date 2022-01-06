@@ -28,7 +28,7 @@ public class ProductDao {
 
 
     public List<Product> showListProduct() {
-        String show = "select product.* , category.name from product join category on product.idcategory = category.idcategory";
+        String show = "select product.* , category.nameCate from product join category on product.idcategory = category.idcategory";
         List<Product> productList = new ArrayList<>();
 
         try (Connection connection = connectionJDBC.getConnection();
@@ -41,7 +41,7 @@ public class ProductDao {
                 int soluong = rs.getInt("soluong");
                 String mausac = rs.getString("mausac");
                 String depcription = rs.getString("depcription");
-                String namecategory = rs.getString("name");
+                String namecategory = rs.getString("nameCate");
                 productList.add(new Product(id, name, price, soluong,mausac,depcription,namecategory));
             }
             return productList;
@@ -53,7 +53,7 @@ public class ProductDao {
     }
 
     public List<Product> searchByName(String findname) {
-        String getall = "select product.* , category.name from product\n" +
+        String getall = "select product.* , category.nameCate from product\n" +
                 " join category on product.idcategory = category.idcategory where product.name like '%" + findname +"%'";
 
 
@@ -68,7 +68,7 @@ public class ProductDao {
                 int soluong = rs.getInt("soluong");
                 String mausac = rs.getString("mausac");
                 String depcription = rs.getString("depcription");
-                String namecategory = rs.getString("name");
+                String namecategory = rs.getString("nameCate");
                 productList.add(new Product(id, name, price, soluong,mausac,depcription,namecategory));
             }
             return productList;

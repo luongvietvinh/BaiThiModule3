@@ -3,7 +3,6 @@ package service;
 import dao.ProductDao;
 import model.Product;
 
-import java.sql.SQLException;
 import java.util.List;
 
 public class ProductService {

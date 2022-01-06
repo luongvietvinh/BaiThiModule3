@@ -2,9 +2,10 @@
   Created by IntelliJ IDEA.
   User: Admind
   Date: 31/12/2021
-  Time: 10:16 SA
+  Time: 10:13 SA
   To change this template use File | Settings | File Templates.
 --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -14,26 +15,28 @@
     <title>Title</title>
 </head>
 <body>
-<form  method="post">
+<form method="post">
     <div class="form-group">
-        <label >nhap lai name</label>
+        <label>nhap name</label>
         <input type="text" class="form-control" name="name" aria-describedby="emailHelp" placeholder="enter name">
     </div>
     <div class="form-group">
-        <label>nhap lai ngay sinh</label>
-        <input type="text" class="form-control" name="ngaysinh" aria-describedby="emailHelp" placeholder="enter ngay sinh">
+        <label>nhap giá</label>
+        <input type=text class="form-control" name="price"
+               placeholder="nhap giá">
     </div>
     <div class="form-group">
-        <label >nhap lai address</label>
-        <input type="text" class="form-control" name="address" placeholder="enter address">
+        <label>nhap soluong</label>
+        <input type="text" class="form-control" name="soluong" placeholder="enter so luong">
     </div>
     <div class="form-group">
-        <label>nhap lai phonenumber</label>
-        <input type="text" class="form-control" name="phoneNumber" aria-describedby="emailHelp" placeholder="enter phone">
+        <label>nhap mau sac</label>
+        <input type="text" class="form-control" name="mausac"
+               placeholder="enter mau sac">
     </div>
     <div class="form-group">
-        <label>nhap lai email</label>
-        <input type="text" class="form-control" name="email" aria-describedby="emailHelp" placeholder="enter email">
+        <label>nhap depcription</label>
+        <input type="text" class="form-control" name="depcription"  placeholder="enter depcription">
     </div>
 
     <div class="form-group">
@@ -41,13 +44,18 @@
         <select name="idCategory">
             <c:forEach items="${categorys}" var="p">
                 <option value="${p.idcategory}">
-                    <p>${p.nameCategory}</p>
+                    <p>${p.name}</p>
                 </option>
             </c:forEach>
         </select>
 
     </div>
+    <%--    <div class="form-check">--%>
+    <%--        <input type="checkbox" class="form-check-input" id="exampleCheck1">--%>
+    <%--        <label class="form-check-label" for="exampleCheck1">Check me out</label>--%>
+    <%--    </div>--%>
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 </body>
 </html>
+

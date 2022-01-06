@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.SQLException;
+
 import java.util.List;
 @WebServlet(urlPatterns = "/product")
 public class ProductServelet extends HttpServlet {
@@ -112,7 +112,7 @@ public class ProductServelet extends HttpServlet {
         productService.edit(id, product);
 
         try {
-            response.sendRedirect("/student");
+            response.sendRedirect("/product");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -123,7 +123,7 @@ public class ProductServelet extends HttpServlet {
         productService.delete(id);
 
         try {
-            response.sendRedirect("/student");
+            response.sendRedirect("/product");
         } catch (IOException e) {
             e.printStackTrace();
         }
